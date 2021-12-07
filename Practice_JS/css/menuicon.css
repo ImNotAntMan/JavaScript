@@ -6,6 +6,11 @@
 .topmenu {
     display: flex;
     flex-direction: row;
+    margin: 200px;
+}
+
+.menu1 {
+    margin-right: 50px;
 }
 .div1 {
     width: 35px;
