@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabs</title>
+    <link rel="stylesheet" href="/css/tabs.css">
+</head>
+<body>
+    <div class="tab">
+        <button class="tablinks" onClick="openCity(event, 'London')">런던</button>
+        <button class="tablinks" onClick="openCity(event, 'Paris')">파리</button>
+        <button class="tablinks" onClick="openCity(event, 'Seoul')" id="defaultOpen">서울</button>
+    </div>
+
+    <div class="tabcontent" id="London">
+        <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+        <h3>런던</h3>
+        <p>London is th capital city of England</p>
+    </div>
+    <div class="tabcontent" id="Paris">
+        <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+        <h3>파리</h3>
+        <p>Paris is th capital city of France</p>
+    </div>
+    <div class="tabcontent" id="Seoul">
+        <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+        <h3>서울</h3>
+        <p>Seoul is th capital city of Korea</p>
+    </div>
+    
+    <script src="/js/tabs.js"></script>
+</body>
+</html>
