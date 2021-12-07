@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tab Headers</title>
+    <link rel="stylesheet" href="/css/tabheaders.css">
+</head>
+<body>
+    <div class="tabcontent" id="London">
+        <h1>London</h1>
+        <p>London is the captal city of England</p>
+    </div>
+    <div class="tabcontent" id="Paris">
+        <h1>Paris</h1>
+        <p>Paris is the captal city of France</p>
+    </div>
+    <div class="tabcontent" id="Seoul">
+        <h1>Seoul</h1>
+        <p>Seoul is the captal city of Korea</p>
+    </div>
+    <div class="tabcontent" id="Oslo">
+        <h1>Oslo</h1>
+        <p>Oslo is the captal city of Norway</p>
+    </div>
+
+    <button class="tablink" onclick="openCity('London', this, 'red')">London</button>
+    <button class="tablink" onclick="openCity('Paris', this, 'blue')">Paris</button>
+    <button class="tablink" onclick="openCity('Seoul', this, 'orange')">Seoul</button>
+    <button class="tablink" onclick="openCity('Oslo', this, 'green')" id="defaultOpen">Oslo</button>
+    <script src="/js/tabheaders.js"></script>
+</body>
+</html>
