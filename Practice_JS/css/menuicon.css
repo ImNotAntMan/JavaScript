@@ -3,7 +3,11 @@
     padding: 0;
 }
 
-div {
+.topmenu {
+    display: flex;
+    flex-direction: row;
+}
+.div1 {
     width: 35px;
     height: 5px;
     background-color: black;
@@ -24,3 +28,18 @@ div {
 }
 
 /* 첫번째 bar 회전 */
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+/* 두번째 bar Fade out */
+.change .bar2 {
+    opacity: 0;
+}
+
+/* 세번째 bar 회전 */
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: translate(45deg) translate(-8px, -8px);
+}
