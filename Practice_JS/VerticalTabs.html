@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vertical Tabs</title>
+    <link rel="stylesheet" href="/css/verticaltabs.css">
+</head>
+<body>
+    <div class="tab">
+        <button class="tablinks" onclick="openCity(event, 'London')">London</button>
+        <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
+        <button class="tablinks" id="defaultOpen" onclick="openCity(event, 'Seoul')" >Seoul</button>
+    </div>
+
+    <div class="tabcontent" id="London">
+        <h3>런던</h3>
+        <p>London is th capital city of England</p>
+    </div>
+    <div class="tabcontent" id="Paris">
+        <h3>파리</h3>
+        <p>Paris is th capital city of France</p>
+    </div>
+    <div class="tabcontent" id="Seoul">
+        <h3>서울</h3>
+        <p>Seoul is th capital city of Korea</p>
+    </div>
+    <script src="/js/verticaltabs.js"></script>
+</body>
+</html>
