@@ -9,6 +9,7 @@ function filterFunction() {
     div = document.getElementById("myDropdown");
     a = div.getElementsByTagName("a");
     for(i = 0; i < a.length; i++) {
+        console.log(a[i]);
         txtValue = a[i].textContent || a[i].innerText;
         if(txtValue.toUpperCase().indexOf(filter) > -1) {
             a[i].style.display = "";
