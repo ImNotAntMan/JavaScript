@@ -1,8 +1,20 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
+body {
+    font-family: Verdana, sans-serif;
+  }
+  
+  
+  img {
+    margin-bottom: -4px;
+  }
+  
+  
+/* */
 .row > .column {
     padding: 0 8px;
 }
