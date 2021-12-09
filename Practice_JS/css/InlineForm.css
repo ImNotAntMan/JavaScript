@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.form-inlie {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+
+.form-inlie label {
+    margin: 5px 10px 5px 0;
+}
+
+.form-inlie input {
+    vertical-align: middle;
+    margin: 5px 10px 5px 0;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+
+.form-inlie button {
+    padding: 10px 20px;
+    background-color: dodgerblue;
+    border: 1px solid #ddd;
+    color: white;
+    cursor: pointer;
+}
+
+.form-inlie button:hover {
+    background-color: royalblue;
+}
+
+@media (max-width: 800px) {
+    .form-inlie input {
+        margin: 10px 0;
+    }
+    .form-inlie {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
