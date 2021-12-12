@@ -1,0 +1,15 @@
+client ID : 
+1021198649066-sorboke2p46e6qbtb4afn0bm5sn6jbnt.apps.googleusercontent.com
+1021198649066-sorboke2p46e6qbtb4afn0bm5sn6jbnt.apps.googleusercontent.com
+Client Secret 
+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
+
+Api key
+AIzaSyCMtDP1LVoo47BRjaKABmxLjoIZFWObNmQ
+
+{
+  "id": "AM8757iKA9Vcr4zC6m2zlHx-4s0uWOa4dQW1GNcuMPdbVYzR2QQTQ98",
+  "title": "MyAlbum",
+  "productUrl": "https://photos.google.com/lr/album/AM8757iKA9Vcr4zC6m2zlHx-4s0uWOa4dQW1GNcuMPdbVYzR2QQTQ98",
+  "isWriteable": true
+}

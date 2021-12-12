@@ -1,0 +1,80 @@
+<html>
+<head>
+</head>
+<link rel="stylesheet" href="/css/style.css">
+<body onload="test();">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://apis.google.com/js/api.js"></script>
+<script src="https://apis.google.com/js/platform.js?onload=onLoadCallback" async defer></script>
+
+<a href="#" onclick="test(); return false;">click!!!</a>
+<div class="top">
+    <div class="top-logo">
+            청주에서 사는 것!
+     </div>
+     <div class="top-menu">
+      <div class="top-right">
+        
+      </div>
+      <div class="topnav">
+        <a class="active" href="index.html">Home</a>
+        <a href="#news">뉴스</a>
+        <a href="googlephoto.html"><a href="" onclick="test(); return false;">동네사진관
+        </a>
+      <div class="topnav-right">
+        <a onclick="document.getElementById('id01').style.display='block'" style="width:auto;">로그인</a>
+        <a href="#about">About</a>
+      </div>
+     </div>
+</div>      
+<div class="contents">
+	<ul id="photolist">
+	</ul>
+</div>
+</body>
+<script>
+
+    function onLoadCallback() {
+
+      console.log('onLoadCallback');
+      gapi.load('auth2', function() {
+        gapi.auth2.init({
+            client_id: '1021198649066-sorboke2p46e6qbtb4afn0bm5sn6jbnt.apps.googleusercontent.com',
+            //This two lines are important not to get profile info from your users
+            fetch_basic_profile: true,
+            scope: 'email'
+        });        
+      });     
+    }
+
+</script>
+
+<script>
+function start() {
+  // 2. Initialize the JavaScript client library.
+	gapi.client.request({
+	  'path': 'https://photoslibrary.googleapis.com/v1/albums',
+	   'path': 'https://photoslibrary.googleapis.com/v1/mediaItems',
+	})
+	.then(function(response) {
+	console.log(response.result);
+		var strList = "";
+		for(var i=0; i< response.result.mediaItems.length ; i++){
+			strList = strList+ "<li class='photo'><img src='"+response.result.mediaItems[i].baseUrl+"'/>"+"</li>";
+			$("#photolist").html(strList);
+		}
+    }, function(reason) {
+	console.log('Error: ' + reason.result.error.message);
+	});
+};
+
+
+function test(){
+gapi.load('client', start);
+}
+</script>
+    
+    
+</body>
+</html>

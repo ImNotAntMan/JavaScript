@@ -2,7 +2,74 @@
     margin: 0;
     padding: 0;
     border: 0px solid red;
+    box-sizing: border-box;
 }
+
+.top {
+  display: flex ;
+  flex-direction: row;
+  width: 100%;
+  height: 50px;
+  margin 5px;
+  border: 1px solid red;
+}
+
+.top-logo {
+  float: left;
+  width: 100%;
+  height: 50px;
+  font-size: 44px;
+  font-family: 'Nanum Brush Script', cursive;
+  border: 0px solid red;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: white;
+  border: 2px solid red;
+}
+
+.topnav a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: red;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.topnav-right {
+  float: right;
+}
+.topnav-right a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav-right a:hover {
+  background-color: red;
+  color: black;
+}
+
+.topnav-right a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
 
 button {
     background-color: #f1f1f1;
@@ -14,22 +81,10 @@ button {
     width: 100%;
   }
   
-.top-logo {
-    font-size: 44px;
+.contents {
+  display: flex;
+  flex-direction: row;
 }
-
-.top-left {
-    float: left;
-    font-family: 'Nanum Brush Script', cursive;
-}
-
-.top-right {
-    float: right;
-
-}
-
-body {font-family: Arial, Helvetica, sans-serif;}
-
 /* Full-width input fields */
 input[type=email], input[type=password] {
   width: 100%;
@@ -104,7 +159,20 @@ span.psw {
   background-color: #fefefe;
   margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
   border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
+  width: 60%; /* Could be more or less, depending on screen size */
+}
+.modal-about {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
 }
 
 /* The Close Button (x) */
@@ -139,6 +207,130 @@ span.psw {
   to {transform: scale(1)}
 }
 
+.contents {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 700px;
+}
+
+.contents-in {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contents-in img {
+  vertical-align: middle;
+  width: 100%;
+}
+
+.contents-in .content {
+  position: relative;
+  bottom: 0;
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+
+.contents-news {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  align-self:auto;
+  width: 100%;
+  margin: 12px 2px 12px 2px;
+  padding: 2px 2px 2px 2px;
+  border: 39x solid red;
+}
+
+.contents-in-news {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contents-in-news img {vertical-align: middle;}
+
+.contents-in-news .content-news {
+  position: relative;
+  bottom: 0;
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1;
+  width: 100%;
+  padding: 0 20px 0 20px;
+}
+
+.ads-left {
+  display: block;
+  float: left;
+  position: relative;
+  background-color: #f44336;
+  height: 600px;
+  width: 200px;
+}
+
+.ads-right {
+  display: block;
+  float: right;
+  position: relative;
+  background-color: #f44336;
+  height: 600px;
+  width: 200px;
+  border: 1px solid black;
+}
+
+.photo {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  max-width: 800px;
+}
+
+.photo img {vertical-align: middle;}
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+}
 /* Change styles for span and cancel button on extra small screens */
 @media screen and (max-width: 300px) {
   span.psw {
