@@ -9,10 +9,24 @@
     <script src="https://apis.google.com/js/api.js"></script>
     <script src="https://apis.google.com/js/platform.js?onload=onLoadCallback" async defer></script>
     <link rel="stylesheet" href="/css/test.css">
+    <link rel="stylesheet" href="/css/style.css">
     <title>Document</title>
 </head>
 <body>
-    <div>
+  <div class="top">
+    <div class="top-logo">
+서울은 살곳이 못 된다.
+    </div>
+    <div class="topnav">
+      <a class="active" href="index.html">Home</a>
+      <a href="news.html">뉴스</a>
+      <a href="photo.html" onclick="">동네사진들</a>
+      <a href="about.html">email</a>
+      <a onclick="document.getElementById('id02').style.display='block'" style="width:auto;" href="#" >About</a>
+      <a onclick="document.getElementById('id01').style.display='block'" style="width:auto;" href="#">로그인</a>
+    </div>
+  </div>
+  <div>
         <ul id="photolist">
         </ul>
     </div>

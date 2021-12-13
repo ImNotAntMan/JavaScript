@@ -2,13 +2,15 @@
 <head>
 </head>
 <link rel="stylesheet" href="/css/style.css">
-<body onload="test();">
+<body onload="">
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://apis.google.com/js/api.js"></script>
-<script src="https://apis.google.com/js/platform.js?onload=onLoadCallback" async defer></script>
+<script src="https://apis.google.com/js/platform.js?onload=onLoadCallback" async defer>
+</script>
 
 <a href="#" onclick="test(); return false;">click!!!</a>
+
 <div class="top">
     <div class="top-logo">
             청주에서 사는 것!
@@ -25,19 +27,48 @@
       <div class="topnav-right">
         <a onclick="document.getElementById('id01').style.display='block'" style="width:auto;">로그인</a>
         <a href="#about">About</a>
-      </div>
+        <a href="googlePhoto.html">구글포토Test</a>      </div>
      </div>
 </div>      
-<div class="contents">
-	<ul id="photolist">
-	</ul>
-</div>
+
+<div class="photo">
+  <!-- Photo Grid -->
+      <div class="row"> 
+          <div class="column">
+            <ul id="photolist"></ul>
+          </div>
+        </div>
+      </div>
+            <img src="/img/CYMERA_20210315_101241.jpg" style="width:100%">
 </body>
+<style>  
+  #photolist {
+    list-style-type: none;
+    display: flex;
+    float: left;
+    flex-wrap: wrap;
+    flex-direction: row;
+    outline: 2px dotted red;
+    width: 100%;
+    height: 100%;
+    margin-left: 10px;
+    /* padding: 50px;
+    margin: 20px; */
+}
+
+#photolist ul li {
+  clear: both;
+  width: 100%;
+  height: 300px;
+}
+</style>
+
 <script>
 
     function onLoadCallback() {
 
-      console.log('onLoadCallback');
+      console.log("onLoadCallback");
+
       gapi.load('auth2', function() {
         gapi.auth2.init({
             client_id: '1021198649066-sorboke2p46e6qbtb4afn0bm5sn6jbnt.apps.googleusercontent.com',
@@ -59,12 +90,17 @@ function start() {
 	   'path': 'https://photoslibrary.googleapis.com/v1/mediaItems',
 	})
 	.then(function(response) {
-	console.log(response.result);
 		var strList = "";
 		for(var i=0; i< response.result.mediaItems.length ; i++){
 			strList = strList+ "<li class='photo'><img src='"+response.result.mediaItems[i].baseUrl+"'/>"+"</li>";
+      if(response.result.mediaItems.length / 6 == 0) {
+        
+      }
 			$("#photolist").html(strList);
 		}
+    // strList = strList+ "<li class='photo'><img src='"+response.result.mediaItems[i].baseUrl+"'/>"+"</li>";
+		// 	$("#photolist").html(strList);
+		// }
     }, function(reason) {
 	console.log('Error: ' + reason.result.error.message);
 	});
@@ -73,6 +109,7 @@ function start() {
 
 function test(){
 gapi.load('client', start);
+console.log("test");
 }
 </script>
     

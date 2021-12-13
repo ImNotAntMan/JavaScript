@@ -308,14 +308,16 @@ span.psw {
 }
 
 .ads-left {
-  width: 200px;
+  position: relative;
+  width: 100%;
   height: 800px;
   border: 2px solid black;
 }
 
 
 .ads-right {
-  width: 200px;
+  position: relative;
+  width: 100%;
   height: 800px;
   border: 2px solid black;
 
@@ -325,6 +327,7 @@ span.psw {
   display: flex;
   flex-direction: row;
   width: 100%;
+  padding: 0px;
 }
 
 .contents-in {
@@ -422,8 +425,9 @@ span.psw {
   justify-content: center;
   -ms-flex-wrap: wrap; /* IE10 */
   flex-wrap: wrap;
+  width: 100%;
   padding: 10px;
-  padding-top: 5[x];
+  padding-top: 5px;
 }
 
 .main {
